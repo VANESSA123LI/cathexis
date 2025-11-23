@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}About - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>About Cathexis</h1>
+    
+    <div class="about-content">
+        <h2>What is Flask?</h2>
+        <p>Flask is a lightweight web framework for Python. It's called a "microframework" because it doesn't require particular tools or libraries. This makes it:</p>
+        
+        <ul>
+            <li><strong>Simple:</strong> Easy to learn and use</li>
+            <li><strong>Flexible:</strong> You choose what you need</li>
+            <li><strong>Powerful:</strong> Can build complex applications</li>
+        </ul>
+
+        <h2>Project Structure</h2>
+        <pre><code>cathexis/
+├── app.py              # Main Flask application
+├── templates/          # HTML templates (Jinja2)
+│   ├── base.html      # Base template
+│   ├── index.html     # Home page
+│   ├── scout.html     # Scout form
+│   └── ...
+├── static/            # Static files (CSS, JS, images)
+│   └── css/
+│       └── style.css
+├── venv/              # Virtual environment
+└── requirements.txt   # Python dependencies</code></pre>
+
+        <h2>Next Steps to Learn</h2>
+        <ol>
+            <li>Understand routing and URL parameters</li>
+            <li>Learn about templates and Jinja2 syntax</li>
+            <li>Handle forms and user input</li>
+            <li>Connect to a database (SQLite, PostgreSQL, etc.)</li>
+            <li>Add authentication and user sessions</li>
+            <li>Deploy your application</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
+
+

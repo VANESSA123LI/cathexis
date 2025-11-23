@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Home - {{ super() }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome to Cathexis Scouting</h1>
+    
+    <div class="intro">
+        <p>This is your Flask application! Let's explore what you can do:</p>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <h2>🏠 Home Page</h2>
+            <p>You're here! This is the main page of your application.</p>
+        </div>
+
+        <div class="feature-card">
+            <h2>🔍 Scout Feature</h2>
+            <p>Try the scouting form to see how Flask handles form submissions.</p>
+            <a href="{{ url_for('scout') }}" class="btn">Go to Scout</a>
+        </div>
+
+        <div class="feature-card">
+            <h2>📝 Dynamic Routes</h2>
+            <p>See dynamic routes in action:</p>
+            <ul>
+                <li><a href="{{ url_for('hello', name='Alice') }}">Hello Alice</a></li>
+                <li><a href="{{ url_for('hello', name='Bob') }}">Hello Bob</a></li>
+            </ul>
+        </div>
+
+        <div class="feature-card">
+            <h2>🔌 API Endpoint</h2>
+            <p>Check out the JSON API endpoint:</p>
+            <a href="{{ url_for('api_data') }}" class="btn" target="_blank">View API Data</a>
+        </div>
+    </div>
+
+    <div class="learning">
+        <h2>Key Flask Concepts You're Learning:</h2>
+        <ul>
+            <li><strong>Routes:</strong> URLs that your app responds to</li>
+            <li><strong>Templates:</strong> HTML files with dynamic content</li>
+            <li><strong>Template Inheritance:</strong> Base templates with blocks</li>
+            <li><strong>Form Handling:</strong> GET vs POST methods</li>
+            <li><strong>Flash Messages:</strong> Temporary messages to users</li>
+            <li><strong>URL Generation:</strong> url_for() function</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+
